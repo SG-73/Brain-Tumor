@@ -24,12 +24,12 @@ if upload_file is not None:
         with col2:
             if(prediction_class == "No Tumor"):
                 st.title(f":green[{prediction_class}]")
-                st.title(f"({confidence}% confidence)")
+                st.subheader(f"({confidence}% confidence)")
             else:
                 tab1,tab2 = st.tabs(["🧠Result", "📝Info"])
                 with tab1:
                     st.title(f":red[{prediction_class}]")
-                    st.title(f"({confidence}% confidence)")
+                    st.subheader(f"({confidence}% confidence)")
                 with tab2:
                     if prediction_class == "Glioma Tumor":
                         st.write("Glioma is a type of brain tumor that originates in the glial cells, which support and protect the nerve cells in the brain. These tumors can vary in aggressiveness and are classified by their cell type and location in the brain. Symptoms of gliomas can vary but often include headaches, seizures, and neurological deficits.  \n\n  Treatment options depend on the tumor's grade and location and may include surgery, radiation therapy, and chemotherapy. Gliomas are typically challenging to treat due to their tendency to invade surrounding brain tissue, and their prognosis varies widely depending on various factors, including the tumor's type and stage.")
