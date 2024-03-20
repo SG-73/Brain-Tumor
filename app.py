@@ -12,7 +12,7 @@ if upload_file is not None:
     if st.button("Predict"):
         col1, col2 = st.columns(2)
         with col1:
-            MODEL = tf.keras.models.load_model("Models/1")
+            MODEL = tf.keras.models.load_model("Models/2")
             CLASS_NAMES = ["Normal","Glioma Tumor","Meningioma Tumor","Pituitary Tumor"]
             st.image(upload_file,caption="Uploaded Image",width=300)
             img = np.array(Image.open(BytesIO(upload_file.getvalue())))
