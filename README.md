@@ -1,5 +1,7 @@
 # Brain Tumor Detection and Classification using CNNs
 
+### **Dataset:** https://www.kaggle.com/datasets/mohammadhossein77/brain-tumors-dataset
+
 ### Project Overview
 This project provides a web-based application for detecting brain tumors from MRI images using a Convolutional Neural Network (CNN) built and trained in TensorFlow/Keras.
 The Streamlit-based interface allows users to upload an MRI scan and instantly receive a prediction indicating whether the scan shows a tumor — and, if so, the type of tumor.
