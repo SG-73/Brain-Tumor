@@ -1,28 +1,45 @@
 # Brain Tumor Detection and Classification using CNNs
 
 ### Project Overview
-Brain tumors are life-threatening and early detection significantly improves treatment outcomes.
-This repository presents a deep-learning approach to classify MRI images of the brain into different tumor types (for example: benign, malignant, meningioma, glioma) and normal/healthy cases.
+This project provides a web-based application for detecting brain tumors from MRI images using a Convolutional Neural Network (CNN) built and trained in TensorFlow/Keras.
+The Streamlit-based interface allows users to upload an MRI scan and instantly receive a prediction indicating whether the scan shows a tumor — and, if so, the type of tumor.
 
 ### Problem Statement
-Radiologists traditionally inspect MRI scans manually, which is time-consuming and subject to interpretation.
-By leveraging Convolutional Neural Networks and transfer learning, this project aims to **automate tumor detection and classification**, reducing workload and improving diagnostic accuracy.
+Detecting brain tumors manually from MRI images can be time-consuming and prone to human error.
+This project automates the process using a trained deep-learning model, improving the speed, consistency, and accessibility of tumor diagnosis.
 
 ### Tools & Technologies
 - **Language:** Python
-- **Libraries:** TensorFlow / Keras, PyTorch (if applicable), NumPy, Pandas, OpenCV
-- **Environment:** Jupyter Notebook / Python scripts
-- **Techniques:** CNN (possibly VGG16, ResNet50, transfer-learning)
+- **Frameworks & Libraries:** Streamlit, TensorFlow/Keras, NumPy, Pillow
+- **Environment:** Streamlit Web App (.py script)
+- **Model Used:** Pre-trained CNN (loaded via tf.keras.models.load_model)
 - **Dataset:** MRI brain scans (publicly sourced from Kaggle)
 
 ### Approach
-1. **Data Preprocessing:** Load MRI scans → resize to uniform shape → normalize pixel values → augment dataset to handle imbalance.
-2. **Feature Extraction:** Use pre-trained CNN layers (transfer learning) or custom CNN to extract features.
-3. **Model Training:** Train classification layers on top of CNN base, tune hyperparameters (learning rate, epochs, batch size).
-4. **Evaluation & Validation:** Use metrics such as accuracy, F1-score, confusion matrix to validate performance on test data.
-5. **Prediction & Deployment (Optional):** Build a simple interface to predict tumor class given a new MRI image.
+1. **Model Loading:** The trained CNN model is loaded dynamically using TensorFlow/Keras from the Models/2 directory.
+2. **Image Preprocessing:** Uploaded MRI images are resized and normalized to ensure compatibility with the model’s input requirements.
+3. **Prediction:** The model processes the image and predicts the most probable tumor class along with a confidence score.
+4. **Visualization:** The uploaded image and prediction results are displayed side-by-side for better interpretability.
+5. **Information Display:** For tumor cases, the app provides brief medical insights about the detected tumor type.
 
 ### Results
-- Achieved strong classification accuracy (for example: >90 %) on test dataset.
-- Confusion matrix shows high true-positive and low false-negative rates for critical tumor classes.
-- Visualizations included for training history (loss/accuracy over epochs) and sample predictions.
+- Provides real-time predictions with high confidence for 4 brain tumor classes.
+- Interactive and user-friendly web interface for visualizing results.
+- Displays both prediction confidence and tumor-specific medical insights.
+
+### How to Run Locally
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/SG-73/Brain-Tumor.git
+   cd Brain-Tumor
+   ```
+
+2. Install dependencies:
+
+   pip install -r requirements.txt
+
+3. Run the app:
+
+   streamlit run app.py
+
+4. Access the app locally at http://localhost:8501
