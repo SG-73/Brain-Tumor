@@ -13,7 +13,7 @@ By leveraging Convolutional Neural Networks and transfer learning, this project 
 - **Libraries:** TensorFlow / Keras, PyTorch (if applicable), NumPy, Pandas, OpenCV
 - **Environment:** Jupyter Notebook / Python scripts
 - **Techniques:** CNN (possibly VGG16, ResNet50, transfer-learning)
-- **Dataset:** MRI brain scans (publicly sourced from Kaggle, BRATS challenge, etc.)
+- **Dataset:** MRI brain scans (publicly sourced from Kaggle)
 
 ### Approach
 1. **Data Preprocessing:** Load MRI scans → resize to uniform shape → normalize pixel values → augment dataset to handle imbalance.
