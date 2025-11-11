@@ -13,12 +13,12 @@ This project leverages **deep learning** to automate tumor detection and classif
 ### Tools & Technologies
 - **Language:** Python
 - **Frameworks & Libraries:** Streamlit, TensorFlow/Keras, NumPy, Pillow, OpenCV
-- **Model:** Pre-trained CNN (loaded via `tf.keras.models.load_model`)
+- **Model:** CNN models trained and compared in the notebook **`Project\Brain Tumor Detection using 4 variants of CNN (Final).ipynb`**; the best-performing model is saved and loaded for inference in the app.
 - **Deployment:** Streamlit Cloud
 - **Environment:** Python script-based Streamlit Web App
 
 ### Approach
-**Model Loading:** The trained CNN model is loaded dynamically from the `Models/2` directory using TensorFlow/Keras.
+**Model Loading:** The best-performing CNN (from the notebook experiments) is loaded at runtime for inference.
 **Image Preprocessing:** Uploaded MRI images are resized (256×256) and normalized to match the model’s input.
 **Prediction:** The CNN outputs the tumor class and confidence score in real time.
 **Visualization:** The uploaded image and prediction results are displayed side-by-side for clarity.
