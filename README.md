@@ -32,8 +32,8 @@ This project automates the process using a trained deep-learning model, improvin
 ### How to Run Locally
 1. Clone the repository:
    ```bash
-   git clone https://github.com/SG-73/Brain-Tumor.git
-   cd Brain-Tumor
+   git clone https://github.com/SG-73/Brain-Tumor-Detection.git
+   cd Brain-Tumor-Detection
    ```
 
 2. Install dependencies:
