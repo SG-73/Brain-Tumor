@@ -32,8 +32,8 @@ This project leverages **deep learning** to automate tumor detection and classif
 ### How to Run Locally
 1. Clone the repository:
    ```bash
-   git clone https://github.com/SG-73/Brain-Tumor-Detection.git
-   cd Brain-Tumor-Detection
+   git clone https://github.com/SG-73/Brain_Tumor_Detection.git
+   cd Brain_Tumor_Detection
    ```
 
 2. Install dependencies:
